@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -34,14 +34,15 @@
             <div class="spacer2"></div>
             <a href="tel:+79184123443" class="phone-number">+7 918 412-34-43</a>
         </header>
-        <div class="promo">
+    <div class="promo">
             <h1 class="promo__header">Ladesign</h1>
             <h4 class="promo__descr">Дизайн-проекты жилых и коммерческих помещений.</h4>
-            <h4 class="promo__descr">Малая архитектура</h4>      
+            <h4 class="promo__descr">Малая архитектура</h4>
+            <a href="#portfolio" class="promo__arrow"><img src="icons/arrow_down.svg" alt=""></a>     
         </div>
     </section>
-    <main class="main-content">
-        <div class="main-content__container">
+    <div class="container">
+        <main class="main-content">
             <img src="icons/small_arrow_up.svg" alt="Наверх" class="arrow-up">
             <h2 class="main-content__subheader">Наша команда дает уверенность</h2>
             <div class="main-content__box">
@@ -68,14 +69,14 @@
                         <p class="advantages-list__text">Обеспечиваем защиту персональных данных заказчиков и не раскрываем их третьим лицам.</p>
                     </li>
                 </ul>
-                <img src="images/main-content-img.jpg" alt="image" class="main-content__image">
+                <div class="main-content__image">
+                    <img src="images/main-content-img.jpg" alt="image" class="main-content__image-item">
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <div class="portfolio">
-        <h2 class="portfolio-subheader">Портфолио</h2>
-        <div class="portfolio-testbox">
+        <div class="portfolio"><a href="" name="portfolio"></a>
+            <h2 class="portfolio-subheader">Портфолио</h2>
             <ul class="portfolio-category">
                 <li class="portfolio-category__item">
                     <a href="#" class="portfolio-category__link">Все работы</a>
@@ -94,27 +95,36 @@
                     <span class="portfolio-category__link-index">2</span>
                 </li>
             </ul>
+            <div class="portfolio-gallery" id="visible-gallery">
+                <img src="images/pic1.jpg" class="portfolio-gallery__item item1">
+                <img src="images/pic2.jpg" class="portfolio-gallery__item item2">
+                <img src="images/pic3.jpg" class="portfolio-gallery__item item3">
+                <img src="images/pic4.jpg" class="portfolio-gallery__item item4">
+                <img src="images/pic5.jpg" class="portfolio-gallery__item item5">
+                <img src="images/pic6.jpg" class="portfolio-gallery__item item6">
+                <img src="images/pic7.jpg" class="portfolio-gallery__item item7">
+                <img src="images/pic8.jpg" class="portfolio-gallery__item item8">
+                <img src="images/pic9.jpg" class="portfolio-gallery__item item9">
+                <img src="images/pic10.jpg" class="portfolio-gallery__item item10">
+            </div>
+            <div class="hide-gallery" id="invisible-gallery">
+                <img src="images/pic1.jpg" class="portfolio-gallery__item item11">
+                <img src="images/pic2.jpg" class="portfolio-gallery__item item12">
+                <img src="images/pic3.jpg" class="portfolio-gallery__item item13">
+                <img src="images/pic4.jpg" class="portfolio-gallery__item item14">
+                <img src="images/pic5.jpg" class="portfolio-gallery__item item15">
+                <img src="images/pic6.jpg" class="portfolio-gallery__item item16">
+                <img src="images/pic7.jpg" class="portfolio-gallery__item item17">
+            </div>
+            <button class="portfolio-btn" id="show-gallery" type="button">Показать еще работы</button>
         </div>
-        <div class="portfolio-gallery">
-            <div class="portfolio-gallery__item item1"></div>
-            <div class="portfolio-gallery__item item2"></div>
-            <div class="portfolio-gallery__item item3"></div>
-            <div class="portfolio-gallery__item item4"></div>
-            <div class="portfolio-gallery__item item5"></div>
-            <div class="portfolio-gallery__item item6"></div>
-            <div class="portfolio-gallery__item item7"></div>
-            <div class="portfolio-gallery__item item8"></div>
-            <div class="portfolio-gallery__item item9"></div>
-            <div class="portfolio-gallery__item item10"></div>
-        </div>
-        <button class="portfolio-btn">Показать еще работы</button>
-    </div>
 
-    <aside class="more">
-        <div class="more-info">
-            <a href="#" class="more-link">Оставить заявку на проект</a>
-        </div>
-    </aside>
+        <aside class="more">
+            <div class="more-info">
+                <a href="#" class="more-link">Оставить заявку на проект</a>
+            </div>
+        </aside>
+    </div>
 
     <footer class="footer">
         <div class="footer-wrapper">
