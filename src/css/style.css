@@ -44,7 +44,7 @@ body {
 }
 
 .header {
-  position: sticky;
+  position: relative;
   top: 0;
   height: 105px;
   width: 100vw;
@@ -119,6 +119,9 @@ body {
 .phone-number:hover {
   color: #FFFFFF;
 }
+.phone-number:hover:before {
+  content: url(../icons/phone_white.svg);
+}
 .phone-number::before {
   position: relative;
   content: url(../icons/phone.svg);
@@ -130,7 +133,6 @@ body {
 
 .promo {
   position: relative;
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,17 +157,30 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.promo__subheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
 .promo__descr {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
   color: #FFFFFF;
-  margin: 10px 0 0;
   font-size: 2rem;
   line-height: 2.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-.promo__descr:last-child {
   margin: 0;
 }
 .promo__arrow {
@@ -184,8 +199,11 @@ body {
   position: relative;
 }
 
+.main-content {
+  position: relative;
+  margin-top: 150px;
+}
 .main-content__subheader {
-  margin: 150px 0 0;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
   font-size: 40px;
@@ -219,11 +237,12 @@ body {
 
 .arrow-up {
   position: fixed;
+  z-index: 999;
   border: 1px solid #D5D5D5;
   background: rgba(255, 255, 255, 0.5);
-  padding: 6px 4px 10px;
+  padding: 6px 4px 8px;
   margin-top: 36px;
-  right: 18%;
+  right: 18.7%;
 }
 
 .advantages-list {
@@ -285,9 +304,6 @@ body {
   width: 31px;
   height: 30px;
 }
-.advantages-list__btn:active {
-  background: url(../icons/arrow_up-right.svg) no-repeat;
-}
 .advantages-list__text {
   display: none;
   font-family: Roboto, sans-serif;
@@ -300,6 +316,10 @@ body {
   text-transform: none;
   color: #777777;
   padding-top: 12px;
+}
+
+.active-btn {
+  background: url(../icons/arrow_up-right.svg);
 }
 
 .show-text {
@@ -448,6 +468,10 @@ body {
   background-color: #FFFFFF;
   cursor: pointer;
 }
+.portfolio-btn:hover {
+  background-color: #393246;
+  color: #FFFFFF;
+}
 
 .hide-gallery {
   display: none;
@@ -480,6 +504,9 @@ body {
 .more-link::after {
   content: url("../icons/more_arrow.svg");
   vertical-align: super;
+}
+.more-link:hover {
+  border-bottom: 2px solid #393246;
 }
 
 .footer {
@@ -514,6 +541,12 @@ body {
 }
 .footer-links {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .footer-links__item {
   font-family: "Roboto Condensed", sans-serif;
@@ -524,9 +557,10 @@ body {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
-.footer-links__item:first-child {
-  padding-right: 30px;
+.footer-links__item:hover {
+  border-bottom: 1px solid #393246;
 }
 .footer-copyright {
   margin-top: 30px;

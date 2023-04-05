@@ -1,9 +1,13 @@
+// Плавное появление элементов списка
+
 $(function() {
     $('.advantages-list__btn').on('click', function() {
         var block = $(this).closest('.advantages-list__item');
         block.find('.advantages-list__text').slideToggle(400).toggleClass('show-text');
     });
 });
+
+// Плавное отображение скрытых элементов галереи
 
 $( document ).ready(function() {
   $("#show-gallery").click(function() {
@@ -19,3 +23,10 @@ $( document ).ready(function() {
     }
     });
 });
+
+//Смена background у кнопок списка
+
+$(".advantages-list__btn").click(function(e){
+    e.preventDefault();
+    $(this).toggleClass('active-btn');
+ });

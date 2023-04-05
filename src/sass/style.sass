@@ -45,7 +45,7 @@ body
 		background: rgba(0, 0, 0, 0.6)
 
 .header
-	position: sticky
+	position: relative
 	top: 0
 	height: 105px
 	width: 100vw
@@ -99,7 +99,8 @@ body
 	bottom: 2px
 	&:hover
 		@include white-text
-		// content: url(../icons/phone_white.svg)
+		&:before
+			content: url(../icons/phone_white.svg)
 	&::before
 		position: relative
 		content: url(../icons/phone.svg)
@@ -110,7 +111,6 @@ body
 
 .promo
 	position: relative
-	width: 100vw
 	display: flex
 	justify-content: center
 	flex-direction: column
@@ -123,16 +123,20 @@ body
 		line-height: 16.4rem
 		letter-spacing: 0.08em
 		text-transform: uppercase
+	&__subheader
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		margin-top: 10px
 	&__descr
 		@include roboto-condensed-300
 		@include white-text
-		margin: 10px 0 0
 		font-size: 2rem
 		line-height: 2.7rem
 		letter-spacing: 0.12em
 		text-transform: uppercase
-		&:last-child
-			margin: 0
+		margin: 0
 	&__arrow
 		display: block
 		text-align: center
@@ -147,8 +151,9 @@ body
 	position: relative
 
 .main-content
+	position: relative
+	margin-top: 150px
 	&__subheader
-		margin: 150px 0 0
 		@include roboto-condensed-300
 		font-size: 40px
 		line-height: 4.7rem
@@ -169,11 +174,12 @@ body
 
 .arrow-up
 	position: fixed
+	z-index: 999
 	border: 1px solid #D5D5D5
 	background: rgba(255, 255, 255, 0.5)
-	padding: 6px 4px 10px
+	padding: 6px 4px 8px
 	margin-top: 36px
-	right: 18%
+	right: 18.7%
 
 .advantages-list
 	@include indents
@@ -212,8 +218,6 @@ body
 		border: none
 		width: 31px
 		height: 30px
-		&:active
-			background: url(../icons/arrow_up-right.svg) no-repeat
 	&__text
 		display: none
 		@include roboto-300
@@ -225,6 +229,9 @@ body
 		text-transform: none
 		color: #777777
 		padding-top: 12px
+
+.active-btn
+	background: url(../icons/arrow_up-right.svg)
 
 .show-text
 	display: block
@@ -327,6 +334,9 @@ body
 		color: #393246
 		background-color: #FFFFFF
 		cursor: pointer
+		&:hover
+			background-color: #393246
+			@include white-text
 
 
 .hide-gallery
@@ -355,6 +365,8 @@ body
 		&::after
 			content: url('../icons/more_arrow.svg')
 			vertical-align: super
+		&:hover
+			border-bottom: 2px solid #393246
 			
 
 .footer
@@ -372,6 +384,8 @@ body
 		flex-direction: column
 	&-links
 		text-align: center
+		display: flex
+		justify-content: space-between
 		&__item
 			@include roboto-condensed-400
 			color: #3D3D3D
@@ -380,8 +394,9 @@ body
 			letter-spacing: 0.15em
 			text-transform: uppercase
 			text-decoration: none
-			&:first-child
-				padding-right: 30px
+			border-bottom: 2px solid transparent
+			&:hover
+				border-bottom: 1px solid #393246
 	&-copyright
 		margin-top: 30px
 		text-align: center
