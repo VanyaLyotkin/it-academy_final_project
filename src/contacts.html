@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/mixins.min.css">
+    <link rel="stylesheet" href="./css/services.min.css">
+    <link rel="stylesheet" href="./css/contacts.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons/favicon.svg" type="image">
+    <title>Contacts</title>
+</head>
+<body>
+    <header class="header"> 
+        <a href="index.html"><img src="icons/portfolio-logo.svg" alt="logo" class="logo"></a>
+        <div class="spacer"></div>
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="portfolio.html" class="menu__link">Портфолио</a>
+                </li>
+                <li class="menu__item">
+                    <a href="services.html" class="menu__link">Услуги и цены</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="spacer2"></div>
+        <a href="tel:+79184123443" class="phone-number">+7 918 412-34-43</a>
+    </header>
+
+    <main class="container">
+        <h3 class="main-content__subheader">Контакты</h3>
+        <section class="contacts">
+            <form action="post" class="form" action="https://fe.it-academy.by/TestForm.php">
+                <h3 class="reasons__subheader">Напишите нам</h3>
+                <p class="form__text">Мы всегда рады ответить на интересующие  вас вопросы. Заполните форму и наш специалист свяжется с вами.</p>
+
+                <div class="form__name">
+                    <label class="form__name-descr" for="name">Ваше имя</label>
+                    <div class="form__name-field">
+                      <input type="text" placeholder="Александр" class="form__name-field-item" id="name">
+                    </div>
+                </div>
+
+                <div class="form__mail">
+                    <label class="form__mail-descr" for="mail"></label>
+                    <div class="form__mail-field">
+                      <input type="text" placeholder="Ваша эл. почта" class="form__mail-field-item" id="mail">
+                    </div>
+                </div>
+
+                <div class="form__question">
+                    <label class="form__question-descr" for="question"></label>
+                    <div class="form__question-field">
+                      <input type="text" placeholder="Ваш вопрос" class="form__question-field-item" id="question">
+                    </div>
+                </div>
+
+                <a href="#" class="upload">Прикрепить файл</a>
+                <div class="form__wrapper">
+                    <button class="form-btn" type="submit">Отправить</button>
+                    <span class="form__accept">Нажимая на кнопку, я даю <a href="#">согласие на обработку персональных данных</a></span>
+                </div>
+            </form>
+            <div class="feedback">
+                <h3 class="reasons__subheader">Наши контакты</h3>
+                <ul class="feedback__list">
+                    <li class="feedback__list-item">+7 918 412-34-43</li>
+                    <li class="feedback__list-item">ladesign@inbox.ru</li>
+                    <li class="feedback__list-item">Пн - Сб 9:00 — 18:00</li>
+                    <li class="feedback__list-item">г. Краснодар, ул. Братьев Игнатовых, 1/1</li>
+                </ul>
+            </div>
+        </section>
+        <a href="#top" class="arrow-up"><img src="icons/small_arrow_up.svg" alt="Наверх" ></a>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

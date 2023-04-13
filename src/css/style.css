@@ -97,6 +97,7 @@ body {
   font-size: 1.4rem;
   line-height: 1.6rem;
   letter-spacing: 0.15em;
+  border-bottom: 1px solid transparent;
 }
 .menu__link:hover {
   color: #FFFFFF;
@@ -125,8 +126,6 @@ body {
 .phone-number::before {
   position: relative;
   content: url(../icons/phone.svg);
-  width: 21px;
-  height: 21px;
   padding-right: 10px;
   top: 5px;
 }
