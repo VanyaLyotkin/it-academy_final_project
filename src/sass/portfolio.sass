@@ -1,15 +1,22 @@
+body
+	overflow: hidden
+	box-sizing: border-box
 .menu
+	&__active
+		background-color: #FFFFFF
 	&__link
 		color: #777777
 		&:hover
 			color: #777777
 			border-bottom: 1px solid #777777
-
 .phone-number
 	color: #777777
 	&:hover
 		color: #777777
-		&:before
+		&::before
 			content: url(../icons/phone_gray_hover.svg)
 	&::before
 		content: url(../icons/phone_gray.svg)
+.hamburger
+	& span
+		background-color: #393246

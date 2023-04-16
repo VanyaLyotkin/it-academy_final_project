@@ -135,4 +135,55 @@
                     content: url(../icons/contacts_location.svg)
 .footer
     margin-top: 130px
+
+@media (max-width: 768px)
+    .contacts
+        flex-direction: column
+    .form
+        max-width: 100%
+    .feedback
+        margin-top: 70px
+        &__list
+            display: grid
+            grid-template-areas: "phone clock" "mail location"
+            &-item
+                &:first-child
+                    grid-area: phone
+                &:nth-child(2)
+                    grid-area: mail
+                &:nth-child(3)
+                    grid-area: clock
+                &:last-child
+                    grid-area: location
+@media (max-width: 320px)
+    .contacts
+        margin-top: 50px
+    .reasons__subheader
+        line-height: 125%
+    .form
+        &__text
+            font-size: 1.6rem
+            line-height: 2.4rem
+        &__name
+            margin-top: 14px
+        &__wrapper
+            flex-direction: column
+            margin-top: 20px
+        &__accept
+            margin-top: 20px
+            margin-left: 0
+        &-btn
+            width: 100%
+        .upload
+            margin-top: 30px
+    .feedback
+        &__list
+            grid-template-areas: "phone" "clock" "mail" "location"
+    .footer
+        margin-top: 70px
+        
+                    
+                    
+
+    
                 

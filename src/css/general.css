@@ -21,9 +21,9 @@
 html {
   font-size: 10px;
   overflow: overlay;
+  scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -287,11 +287,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .advantages-list__item:last-child {
   padding-bottom: 23px;
@@ -300,7 +297,7 @@ body {
   background: url(../icons/arrow_down-right.svg) no-repeat;
   cursor: pointer;
   border: none;
-  width: 31px;
+  width: 30px;
   height: 30px;
 }
 .advantages-list__text {
@@ -675,13 +672,20 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .logo {
+    margin-left: 30px;
+  }
+  .hamburger {
+    margin-right: 35px;
+  }
   .promo__header {
     font-size: 6rem;
     line-height: 7rem;
   }
-  .promo__subheader {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+  .promo__descr {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-top: 20px;
   }
   .arrow-up {
     display: block;
@@ -737,7 +741,6 @@ body {
     grid-template-areas: "item1 item2" "item1 item3" "item4 item5" "item6 item6" "item7 item7" "item7 item7" "item8 item9" "item10 item10";
     grid-template-rows: repeat(8, auto);
     grid-template-columns: repeat(2, auto);
-    grid-auto-flow: dense;
   }
   .portfolio-gallery__item {
     width: 100%;
@@ -756,5 +759,96 @@ body {
   }
   .footer {
     margin-top: 100px;
+  }
+}
+@media (max-width: 320px) {
+  .arrow-up {
+    right: 15px;
+  }
+  .logo {
+    margin-left: 15px;
+  }
+  .phone-number {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+  .promo__header {
+    margin-top: 95px;
+  }
+  .promo__descr {
+    margin-top: 10px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .container {
+    max-width: 290px;
+    padding: 0 15px;
+  }
+  .main-content__subheader {
+    font-size: 2.9rem;
+    line-height: 3.6rem;
+  }
+  .main-content__box {
+    margin-top: 23px;
+  }
+  .main-content__image {
+    width: 100vw;
+    max-height: 225px;
+  }
+  .advantages-list__descr {
+    line-height: 2.4rem;
+  }
+  .advantages-list__item {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .portfolio__subheader {
+    margin-top: 65px;
+  }
+  .portfolio-gallery {
+    grid-template-areas: "item1" "item1" "item2" "item3" "item4" "item5" "item7" "item6";
+    grid-template-rows: repeat(8, auto);
+    grid-template-columns: auto;
+    grid-gap: 10px;
+  }
+  .portfolio-gallery__item {
+    width: 100%;
+    height: auto;
+  }
+  .portfolio-gallery .item8 {
+    display: none;
+  }
+  .portfolio-gallery .item9 {
+    display: none;
+  }
+  .portfolio-gallery .item10 {
+    display: none;
+  }
+  .portfolio-btn {
+    margin-top: 30px;
+  }
+  .hide-gallery {
+    grid-template-areas: "item11" "item11" "item12" "item13" "item14" "item15" "item16" "item17";
+    grid-template-rows: repeat(8, auto);
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+  .more {
+    margin-top: 75px;
+  }
+  .more-link {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+  .more-link::after {
+    content: url(../icons/small_arrow-up-right320.svg);
+    padding-left: 14px;
+    vertical-align: middle;
+  }
+  .footer {
+    margin-top: 70px;
   }
 }

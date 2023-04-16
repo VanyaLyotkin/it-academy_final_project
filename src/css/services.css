@@ -1,9 +1,16 @@
+.menu__active {
+  background-color: #FFFFFF;
+}
 .menu__link {
   color: #777777;
 }
 .menu__link:hover {
   color: #777777;
   border-bottom: 1px solid #777777;
+}
+
+.hamburger span {
+  background-color: #393246;
 }
 
 .phone-number {
@@ -225,6 +232,10 @@
   cursor: pointer;
   background-color: #FFFFFF;
 }
+.pricelist__rates-item_btn:hover {
+  background-color: #393246;
+  color: #FFFFFF;
+}
 .pricelist__more {
   padding: 0;
   margin-top: 50px;
@@ -342,4 +353,85 @@
   opacity: 1;
   color: #393246;
   width: 120px;
+}
+
+@media (max-width: 768px) {
+  .main-content__subheader {
+    margin-top: 70px;
+  }
+  .reasons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 70px;
+  }
+  .reasons__subheader {
+    max-width: 100%;
+  }
+  .reasons-list {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .pricelist {
+    margin-top: 70px;
+  }
+  .pricelist > h3 {
+    max-width: 380px;
+  }
+  .pricelist__rates {
+    margin-top: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pricelist__rates-item {
+    margin-top: 30px;
+    margin-right: 0;
+  }
+  .pricelist__rates-item:first-child {
+    margin-top: 0;
+  }
+  .pricelist__rates-item:nth-child(2) > :first-child {
+    border: 2px solid #393246;
+    border-bottom: 1px;
+  }
+  .pricelist__rates-item:nth-child(2) > :last-child {
+    border: 2px solid #393246;
+    background: #FFFFFF;
+    color: #393246;
+  }
+  .pricelist__rates-item:nth-child(2) > :last-child:hover {
+    background-color: #393246;
+    color: #FFFFFF;
+  }
+}
+@media (max-width: 320px) {
+  .reasons__subheader {
+    font-size: 2rem;
+    line-height: 120%;
+    max-width: 190px;
+  }
+  .reasons-list__item {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .slick-dots {
+    bottom: -30px;
+  }
+  .slick-dots li {
+    margin: 0;
+    max-width: 20px;
+  }
+  .slick-dots li button:before {
+    content: "";
+    border-bottom: 3px solid #393246;
+    max-width: 20px;
+  }
+  .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #393246;
+    max-width: 20px;
+  }
 }

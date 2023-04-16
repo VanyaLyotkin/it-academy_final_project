@@ -1,11 +1,17 @@
 @import mixins.sass
 
 .menu
+	&__active
+		background-color: #FFFFFF
 	&__link
 		color: #777777
 		&:hover
 			color: #777777
 			border-bottom: 1px solid #777777
+
+.hamburger
+	& span
+		background-color: #393246
 
 .phone-number
 	color: #777777
@@ -143,6 +149,9 @@
 				text-transform: uppercase
 				cursor: pointer
 				background-color: #FFFFFF
+				&:hover
+					background-color: #393246
+					color:  #FFFFFF
 	&__more
 		padding: 0
 		margin-top: 50px
@@ -234,3 +243,68 @@
 	opacity: 1
 	color: #393246
 	width: 120px
+
+@media (max-width: 768px)
+	.main-content
+		&__subheader
+			margin-top: 70px
+	.reasons
+		flex-direction: column
+		margin-top: 70px
+		&__subheader
+			max-width: 100%
+		&-list
+			max-width: 100%
+			margin-top: 30px
+	.pricelist
+		margin-top: 70px
+		& > h3
+			max-width: 380px
+		&__rates
+			margin-top: 30px
+			flex-direction: column
+			&-item
+				margin-top: 30px
+				margin-right: 0
+				&:first-child
+					margin-top: 0
+				&_btn
+				&:nth-child(2) > :first-child
+					border: 2px solid #393246
+					border-bottom: 1px 
+				&:nth-child(2) > :last-child
+					border: 2px solid #393246
+					background: #FFFFFF	
+					color: #393246
+					&:hover
+						background-color: #393246
+						color: #FFFFFF
+@media (max-width: 320px)
+	.reasons
+		&__subheader
+			font-size: 2rem
+			line-height: 120%
+			max-width: 190px
+		&-list
+			&__item
+				font-size: 1.6rem
+				line-height: 2.4rem
+	.slick-dots
+		bottom: -30px
+
+	.slick-dots li
+		margin: 0
+		max-width: 20px
+
+	.slick-dots li button:before
+		content: ''
+		border-bottom: 3px solid #393246
+		max-width: 20px
+
+	.slick-dots li.slick-active button:before
+		opacity: 1
+		color: #393246
+		max-width: 20px
+						
+
+			

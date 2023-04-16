@@ -1,3 +1,12 @@
+body {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.menu__active {
+  background-color: #FFFFFF;
+}
 .menu__link {
   color: #777777;
 }
@@ -12,9 +21,13 @@
 .phone-number:hover {
   color: #777777;
 }
-.phone-number:hover:before {
+.phone-number:hover::before {
   content: url(../icons/phone_gray_hover.svg);
 }
 .phone-number::before {
   content: url(../icons/phone_gray.svg);
+}
+
+.hamburger span {
+  background-color: #393246;
 }
