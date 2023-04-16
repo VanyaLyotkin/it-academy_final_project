@@ -1,0 +1,203 @@
+@import mixins
+
+@media (max-width: 1024px)
+	.header
+		justify-content: space-between
+	.logo
+		margin-left: 45px
+	.spacer
+		display: none
+	.spacer2
+		display: none
+	.menu
+		display: none
+		&__active
+			position: absolute
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			top: 0
+			left: 0
+			width: 100%
+			height: 695px
+			padding: 0 15px
+			background-color: #000000
+			top: 105px
+			left: 0
+		&__item
+			@include indents
+			margin-top: 20px
+			line-height: 125%
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-top: 20px
+		&__link
+			@include roboto-condensed-300
+			font-size: 20px	
+	.hamburger
+		display: block
+		cursor: pointer
+		position: relative
+		top: 5px
+		margin-right: 50px
+		transform: translateY(-50%)
+		width: 26px
+		height: 12px
+		& span 
+			display: block
+			height: 2px
+			width: 100%
+			background-color: #fff
+			margin-bottom: 5px
+			transition: .5s all
+			&:last-child
+				margin-bottom: 0
+		&__active
+			& span
+				margin-bottom: -2px
+				&:nth-child(1)
+					transform: translateY(3px) rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: translateY(3px) rotate(45deg)
+	.main-content
+		&__image
+			width: 450px
+	.arrow-up
+		display: none
+
+@media (max-width: 768px)
+	.logo
+		margin-left: 30px
+	.hamburger
+		margin-right: 35px
+	.promo
+		&__header
+			font-size: 6rem
+			line-height: 7rem
+		&__descr
+			font-size: 1.8rem
+			line-height: 2rem
+			margin-top: 20px
+	.arrow-up
+		display: block
+		right: 45px
+	.container
+		max-width: 768px
+		padding: 0 45px
+	.main-content
+		margin-top: 70px
+		&__box
+			flex-direction: column
+			align-items: center
+			margin-top: 30px
+		&__image
+			width: 100%
+			height: auto
+			margin: 50px 0 0 0
+	.advantages-list
+		max-width: 100%
+		&__descr
+			padding: 0 0 30px 0
+	.portfolio
+		&-subheader
+			margin-top: 70px
+		&-category
+			width: 100%
+			margin-top: 35px
+			flex-direction: column
+			align-items: center
+			&__item
+				padding: 0 0 10px 0
+		&-gallery
+			margin-top: 30px
+			grid-template-areas: "item1 item2" "item1 item3" "item4 item5" "item6 item6" "item7 item7" "item7 item7" "item8 item9" "item10 item10"
+			grid-template-rows: repeat(8, auto)
+			grid-template-columns: repeat(2, auto)
+			&__item
+				width: 100%
+				height: auto
+		&-btn
+			margin-top: 40px
+	.hide-gallery
+		grid-template-areas: "item11 item12" "item11 item13" "item14 item15" "item16 item16" "item17 item17" "item17 item17"
+		grid-template-rows: repeat(3, auto)
+		grid-template-columns: repeat(2, auto)
+	.more
+		margin-top: 100px
+	.footer
+		margin-top: 100px
+
+@media (max-width: 320px)
+	.arrow-up
+		right: 15px
+	.logo
+		margin-left: 15px
+	.phone-number
+		font-size: 1.6rem
+		line-height: 1.9rem
+	.promo
+		&__header
+			margin-top: 95px
+		&__descr
+			margin-top: 10px
+			font-size: 1.6rem
+			line-height: 2.4rem
+	.container
+		max-width: 290px
+		padding: 0 15px
+	.main-content
+		&__subheader
+			font-size: 2.9rem
+			line-height: 3.6rem
+		&__box
+			margin-top: 23px
+		&__image
+			width: 100vw
+			max-height: 225px
+	.advantages-list
+		&__descr
+			line-height: 2.4rem
+		&__item
+			font-size: 1.6rem
+			line-height: 2.4rem
+			flex-wrap: nowrap
+	.portfolio
+		&__subheader
+			margin-top: 65px
+		&-gallery
+			grid-template-areas: "item1" "item1" "item2" "item3" "item4" "item5" "item7" "item6"
+			grid-template-rows: repeat(8, auto)
+			grid-template-columns: auto
+			grid-gap: 10px
+			&__item
+				width: 100%
+				height: auto
+			& .item8
+				display: none
+			& .item9
+				display: none
+			& .item10
+				display: none
+		&-btn
+			margin-top: 30px
+	.hide-gallery
+		grid-template-areas: "item11" "item11" "item12" "item13" "item14" "item15" "item16" "item17"
+		grid-template-rows: repeat(8, auto)
+		grid-template-columns: auto
+		grid-gap: 10px
+		margin-top: 10px
+	.more
+		margin-top: 75px
+		&-link
+			font-size: 1.6rem
+			line-height: 1.9rem
+			&::after
+				content: url(../icons/small_arrow-up-right320.svg)
+				padding-left: 14px
+				vertical-align: middle
+	.footer
+		margin-top: 70px

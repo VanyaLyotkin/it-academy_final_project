@@ -1,4 +1,4 @@
-@import mixins.sass
+@import mixins
 
 @keyframes arrow-down-animation
 	0%,
@@ -10,8 +10,8 @@
 html
 	font-size: 10px
 	overflow: overlay
-	box-sizing: border-box
 	scroll-behavior: smooth
+	box-sizing: border-box
 
 body
 	font-family: 'Roboto', 'Roboto Condensed', sans-serif
@@ -26,6 +26,8 @@ body
 		height: 800px
 		width: 100vw
 		background: rgba(0, 0, 0, 0.6)
+	&__black
+		background: #000000
 
 .header
 	position: relative
@@ -55,8 +57,7 @@ body
 		margin-right: 46px
 		list-style-type: none
 		&:last-child
-			margin: 0
-			
+			margin: 0			
 	&__link
 		@include roboto-condensed-400
 		@include white-text
@@ -69,6 +70,9 @@ body
 		&:hover
 			@include white-text
 			border-bottom: 1px solid
+	&__active
+		top: 105px
+		left: 0
 
 .phone-number
 	@include roboto-condensed-400
@@ -91,6 +95,9 @@ body
 		padding-right: 10px
 		top: 5px
 
+.hamburger
+	display: none
+
 .promo
 	position: relative
 	display: flex
@@ -105,12 +112,6 @@ body
 		line-height: 16.4rem
 		letter-spacing: 0.08em
 		text-transform: uppercase
-	&__subheader
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: center
-		margin-top: 10px
 	&__descr
 		@include roboto-condensed-300
 		@include white-text
@@ -119,6 +120,7 @@ body
 		letter-spacing: 0.12em
 		text-transform: uppercase
 		margin: 0
+		text-align: center
 	&__arrow
 		display: block
 		text-align: center
@@ -147,8 +149,13 @@ body
 		margin-top: 50px
 		display: flex
 		flex-direction: row
+		justify-content: space-between
 	&__image
-		flex: 0 0 585px
+		background-size: cover
+		width: 585px
+		height: auto
+		overflow: hidden
+		margin-left: 20px
 		&-item
 			width: 100%
 			height: 100%
@@ -166,7 +173,6 @@ body
 .advantages-list
 	@include indents
 	list-style-type: none
-	margin-right: 102px
 	max-width: 514px
 	display: flex
 	flex-direction: column
@@ -190,15 +196,14 @@ body
 		padding: 25px 0 24px 0
 		display: flex
 		justify-content: space-between
-		align-items: center
-		flex-wrap: wrap
+		flex-wrap: nowrap
 		&:last-child
 			padding-bottom: 23px
 	&__btn
 		background: url(../icons/arrow_down-right.svg) no-repeat
 		cursor: pointer
 		border: none
-		width: 31px
+		width: 30px
 		height: 30px
 	&__text
 		display: none

@@ -1,10 +1,39 @@
-// Плавное появление элементов списка
+//Попап
 
-$(function() {
-    $('.advantages-list__btn').on('click', function() {
-        var block = $(this).closest('.advantages-list__item');
-        block.find('.advantages-list__text').slideToggle(400).toggleClass('show-text');
-    });
+$('.hamburger').click(function(e) {
+    e.preventDefault();
+    $('.hamburger').toggleClass('hamburger__active');
+    $('.menu').toggleClass('menu__active');
+    $('.main-page').toggleClass('main-page__black');
+});
+
+//Сброс стилей при открытом попапе и увеличении разрешения
+
+function screenCheck(){
+    if ($(window).width() >= 320) { 
+       $('.main-page').removeClass('main-page__black');
+       $('.menu').removeClass('menu__active');
+       $('.hamburger').removeClass('hamburger__active');
+    }
+}
+
+// Плавное появление элементов списка + замена img
+
+$('.advantages-list__btn').click(function() {
+    $(".advantages-list__btn").siblings('.advantages-list__text').slideUp(300);
+    $(this).removeClass('active-btn');
+    if ($(this).siblings('.advantages-list__text').is(':hidden')) {
+        $(this).siblings('.advantages-list__text').slideDown(300);
+        $(this).addClass('active-btn');
+        $('.advantages-list__btn').not(this).removeClass('active-btn');
+    }
+});
+
+$('.advantages-list__btn').click(function() {
+    if ($(this).hasClass('active-btn')) {
+        $(this).parent('.advantages-list__item').css('flex-wrap', 'wrap');
+        // $('.advantages-list__btn').parent('.advantages-list__item').not(this).css('flex-wrap', 'nowrap');
+    }
 });
 
 // Плавное отображение скрытых элементов галереи
@@ -27,13 +56,6 @@ $(document).ready(function() {
     });
 });
 
-//Смена background у кнопок списка
-
-$(".advantages-list__btn").click(function(e){
-    e.preventDefault();
-    $(this).toggleClass('active-btn');
- });
-
 //Плавное появление стоимости проектов
 
 $(document).ready(function() {
@@ -52,11 +74,8 @@ $(document).ready(function() {
         $(".pricelist__rates-item_cost").css('border-bottom', 'none');
         $(".pricelist__rates-item_hide").slideUp(600);
       }
-      $('').animate({
-        scrollTop: $(this).offset().top
-        }, 300);
-      });
-  });
+    });
+});
 
 //Изменение надписи на кнопке 
 
