@@ -32,7 +32,6 @@ $('.advantages-list__btn').click(function() {
 $('.advantages-list__btn').click(function() {
     if ($(this).hasClass('active-btn')) {
         $(this).parent('.advantages-list__item').css('flex-wrap', 'wrap');
-        // $('.advantages-list__btn').parent('.advantages-list__item').not(this).css('flex-wrap', 'nowrap');
     }
 });
 
