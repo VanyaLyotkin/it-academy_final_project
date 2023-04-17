@@ -670,6 +670,9 @@ body {
   .arrow-up {
     display: none;
   }
+  .slick-next {
+    right: 50px !important;
+  }
 }
 @media (max-width: 768px) {
   .logo {
