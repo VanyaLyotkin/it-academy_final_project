@@ -11,6 +11,7 @@
     flex-direction: column
     justify-content: center
     max-width: 45%
+    padding: 0 10px
     &__text
         @include roboto-300
         font-size: 1.8rem
@@ -97,6 +98,7 @@
         padding-right: 10px
 
 .feedback
+    padding: 0 10px
     &__list
         list-style-type: none
         @include indents
@@ -106,6 +108,9 @@
             line-height: 2.4rem
             color: #777777
             margin-top: 26px
+            & a
+                text-decoration: none
+                color: #777
             &:first-child
                 margin-top: 32px
                 &::before

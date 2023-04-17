@@ -55,6 +55,7 @@
   color: #3D3D3D;
   max-width: 380px;
   margin: 0;
+  padding: 0 10px;
 }
 .reasons-list {
   margin: 0;
@@ -71,6 +72,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  padding: 0 10px;
 }
 .reasons-list__item {
   font-family: "Roboto Condensed", sans-serif;
